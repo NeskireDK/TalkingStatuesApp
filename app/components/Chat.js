@@ -80,7 +80,7 @@ export default class ChatScreen extends Component {
     return [
     {
       _id: 1,
-      text: "Hello developer, I am " + name,
+      text: "Hello there ! I'm " + name + ", it's nice to meet you :). You may ask me anything you'd like about me or my artist !"
       createdAt: new Date(),
       user: {
         _id: 2,
