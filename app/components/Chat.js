@@ -5,7 +5,6 @@ import {
 } from 'react-native'
 
 import { GiftedChat } from 'react-native-gifted-chat';
-import {HomeScreen} from '../index'
 
 export default class ChatScreen extends Component {
 
@@ -43,12 +42,6 @@ export default class ChatScreen extends Component {
   }
 
   componentDidUpdate() {
-    if (this.state.statue == undefined) {
-      this.setState({
-        statue: HomeScreen.statues[0].fields,
-        messages: this.initialMessages(HomeScreen.statues[0].fields.name)
-      });
-    }
     console.log("DID UPDATE");
   }
 
@@ -80,7 +73,7 @@ export default class ChatScreen extends Component {
     return [
     {
       _id: 1,
-      text: "Hello there ! I'm " + name + ", it's nice to meet you :). You may ask me anything you'd like about me or my artist !"
+      text: "Hello there ! I'm " + name + ", it's nice to meet you :). You may ask me anything you'd like about me or my artist !",
       createdAt: new Date(),
       user: {
         _id: 2,
