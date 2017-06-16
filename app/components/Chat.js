@@ -42,7 +42,7 @@ export default class ChatScreen extends Component {
   }
 
   componentDidUpdate() {
-    console.log("DID UPDATE");
+    console.log("DID UPDATE", this.props.statue);
   }
 
   componentWillReceiveProps(props) {
