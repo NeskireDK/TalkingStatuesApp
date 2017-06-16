@@ -38,7 +38,28 @@ export default class ChatScreen extends Component {
   }
 
   componentDidMount() {
-    console.log("DID MOUNT");
+    console.log("DID MOUNT", this.props.statue);
+    statue = this.props.statue;
+    if (statue != undefined) {
+
+      this.setState({
+        statue: statue,
+        messages: this.initialMessages(statue.name)
+      });
+    }
+    else if (this.state.statue == undefined && statue != undefined) {
+      this.setState({
+        statue: statue,
+        messages: this.initialMessages(statue.name)
+      })
+    }
+    else if (statue == undefined) {
+      this.setState({
+        statue: statue,
+        messages: this.initialMessages("not even a statue")
+      })
+    }
+    console.log('----> ', this.state)
   }
 
   componentDidUpdate() {
